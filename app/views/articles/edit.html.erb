@@ -1,25 +1,3 @@
-<h2> Edit Page </h2>
-<% if @article.errors.any? %>
-    <h4>There are follownig errors:</h4>
-    <ul>
-        <% @article.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-        <% end %>
-    </ul>
-<% end %>
+<h2> Edit Article Page </h2>
 
-<%= form_for @article do |f| %>
-
-    <p>
-        <%= f.label :title %><br/>
-        <%= f.text_field :title %>
-    </p>
-    <p>
-        <%= f.label :description %><br/>
-        <%= f.text_area :description %>
-    </p>
-    <p>
-        <%= f.submit %>
-    </p>
-
-<% end %>
+<%= render 'form' %>
